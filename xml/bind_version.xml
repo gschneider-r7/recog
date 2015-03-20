@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<fingerprints matches="bind.version">
+	<!-- BIND for Debian Linux -->
+	<fingerprint pattern="^BIND(?:-|\s)?(\d+(?:\.\d+){0,3}(?:-?\w+\d+|-?REL)?) for Debian Linux$">
+		<description>BIND DNS Server for Debian Linux</description>
+		<example>BIND 9.2.4rc5 for Debian Linux</example>
+		<param name="service.vendor" pos="0" value="ISC"/>
+		<param name="service.product" pos="0" value="BIND"/>
+		<param name="service.family" pos="0" value="BIND"/>
+		<param name="service.version" pos="1"/>
+		<param name="os.vendor" pos="0" value="Debian"/>
+		<param name="os.family" pos="0" value="Linux"/>
+		<param name="os.product" pos="0" value="Linux"/>
+	</fingerprint>
+	<!-- BIND for Fedora Linux -->
+	<fingerprint pattern="^BIND(?:-|\s)?(\d+(?:\.\d+){0,3}(?:-?\w+\d+|-?REL)?) for Fedora Linux$">
+		<description>BIND DNS Server for Fedora Linux</description>
+		<example>BIND 9.4.2rc1 for Fedora Linux</example>
+		<param name="service.vendor" pos="0" value="ISC"/>
+		<param name="service.product" pos="0" value="BIND"/>
+		<param name="service.family" pos="0" value="BIND"/>
+		<param name="service.version" pos="1"/>
+		<param name="os.vendor" pos="0" value="Fedora"/>
+		<param name="os.family" pos="0" value="Linux"/>
+		<param name="os.product" pos="0" value="Linux"/>
+	</fingerprint>
+	<!-- BIND ESV -->
+	<fingerprint pattern="^BIND(?:-|\s)?(\d+(?:\.\d+){0,3}-ESV-\w+\d+-\w\d+)$">
+		<description>BIND ESV DNS Server</description>
+		<example>BIND 9.6-ESV-R10-P1</example>
+		<param name="service.vendor" pos="0" value="ISC"/>
+		<param name="service.product" pos="0" value="BIND"/>
+		<param name="service.family" pos="0" value="BIND"/>
+		<param name="service.version" pos="1"/>
+	</fingerprint>
+	<!-- Broad regex for general BIND versions-->
+	<fingerprint pattern="^BIND(?:-|\s)?(\d+(?:\.\d+){0,3}(?:-?\w+\d+|-?REL)?).*$">
+		<description>BIND DNS Server</description>
+		<example>BIND-7.7.7</example>
+		<example>BIND-9</example>
+		<example>BIND-9.2.3rc1</example>
+		<example>BIND-9.2.8-13</example>
+		<example>BIND9.9.1-P2</example>
+		<example>BIND 4.0.01</example>
+		<example>BIND 4.0.1-P5</example>
+		<example>BIND 4.9.10-REL</example>
+		<example>BIND 8.2.2-P5</example>
+		<example>BIND 9.3.2</example>
+		<example>BIND 9.3.4-P1</example>
+		<example>BIND 9.3.1+robhacks</example>
+		<param name="service.vendor" pos="0" value="ISC"/>
+		<param name="service.product" pos="0" value="BIND"/>
+		<param name="service.family" pos="0" value="BIND"/>
+		<param name="service.version" pos="1"/>
+	</fingerprint>
+	<fingerprint flags="REG_ICASE" pattern="^Power\s?DNS Recursor ((?:-\w?)?\d+(?:\.\d+\w?){1,3}(?:-\w+)?)?">
+		<description>PowerDNS Recursor name server</description>
+		<example>PowerDNS Recursor 3.1 $Id: pdns_recursor.cc 2631 2012-06-20 10:12:20Z peter $</example>
+		<example>PowerDNS Recursor 3.1.1 $Id: pdns_recursor.cc 838 2006-05-19 14:35:27Z ahu $</example>
+		<param name="service.vendor" pos="0" value="PowerDNS"/>
+		<param name="service.product" pos="0" value="Recursor"/>
+		<param name="service.family" pos="0" value="PowerDNS"/>
+		<param name="service.version" pos="1"/>
+	</fingerprint>
+	<fingerprint flags="REG_ICASE" pattern="^Power\s?DNS\s?(?:-\w?)?(\d+(?:\.\d+\w?){1,3})">
+		<description>PowerDNS name server</description>
+		<example>Power Dns 2.9.21</example>
+		<example>PowerDNS 2.9.11</example>
+		<example>PowerDNS 2.9.4</example>
+		<example>PowerDNS 7.2</example>
+		<example>PowerDNS 7.2.1</example>
+		<example>PowerDNS-2.43</example>
+		<example>PowerDNS-v15.1b</example>
+		<param name="service.vendor" pos="0" value="PowerDNS"/>
+		<param name="service.product" pos="0" value="PowerDNS"/>
+		<param name="service.family" pos="0" value="PowerDNS"/>
+		<param name="service.version" pos="1"/>
+	</fingerprint>
+	<fingerprint pattern="^[Uu]nbound\s?(\d+\.\d+\.\d+)$">
+		<description>Unbound name server</description>
+		<example>unbound 1.0.0</example>
+		<example>unbound 1.0.1</example>
+		<example>unbound 1.0.2</example>
+		<example>unbound 1.1.1</example>
+		<example>unbound 1.2.0</example>
+		<example>unbound 1.2.1</example>
+		<example>unbound 1.4.14</example>
+		<example>unbound 1.4.15</example>
+		<example>unbound 1.4.16</example>
+		<example>unbound 1.4.17</example>
+		<example>unbound 1.4.18</example>
+		<example>unbound 1.4.8</example>
+		<example>unbound 1.4.9</example>
+		<param name="service.vendor" pos="0" value="NLnet Labs"/>
+		<param name="service.product" pos="0" value="Unbound"/>
+		<param name="service.family" pos="0" value="Unbound"/>
+		<param name="service.version" pos="1"/>
+	</fingerprint>
+	<fingerprint flags="REG_ICASE" pattern="^djb-?\s?dns\s?-?(:?v\.)?(\d+\.\d+(?:-\w\d+)?)$">
+		<description>djbdns</description>
+		<example>DjbDNS 1.05</example>
+		<example>djb-dns 1.05</example>
+		<example>djbdns 0.51</example>
+		<example>djbdns 1.05</example>
+		<example>djbdns v.1.05-r20</example>
+		<example>djbdns-1.05</example>
+		<param name="service.vendor" pos="0" value="djbdns"/>
+		<param name="service.product" pos="0" value="djbdns"/>
+		<param name="service.family" pos="0" value="djbdns"/>
+		<param name="service.version" pos="1"/>
+	</fingerprint>
+	<fingerprint pattern="^dnsmasq-?v?(\d+\.\d+(?:\.\d+)?(?:test\d+|rc\d+|\w+|\+)?)">
+		<description>dnsmasq</description>
+		<example>dnsmasq-1.18</example>
+		<example>dnsmasq-2.0rc1</example>
+		<example>dnsmasq-2.11</example>
+		<example>dnsmasq-2.38a</example>
+		<example>dnsmasq-2.40test10</example>
+		<example>dnsmasq-2.41test8</example>
+		<example>dnsmasq-2.45-OpenDNS-1</example>
+		<example>dnsmasq-2.5</example>
+		<example>dnsmasq-2.50</example>
+		<example>dnsmasq-2.50test6</example>
+		<example>dnsmasq-2.51</example>
+		<example>dnsmasq-2.51.2</example>
+		<example>dnsmasq-2.51test3</example>
+		<example>dnsmasq-2.56rc2</example>
+		<example>dnsmasq-2.58test6</example>
+		<example>dnsmasq-2.59rc1</example>
+		<example>dnsmasq-2.63+</example>
+		<example>dnsmasq-2.63rc6</example>
+		<example>dnsmasq-2.7</example>
+		<example>dnsmasq-v2.60test17</example>
+		<example>dnsmasq-v2.64test4</example>
+		<param name="service.vendor" pos="0" value="dnsmasq"/>
+		<param name="service.product" pos="0" value="dnsmasq"/>
+		<param name="service.family" pos="0" value="dnsmasq"/>
+		<param name="service.version" pos="1"/>
+	</fingerprint>
+	<fingerprint pattern="^Nominum ANS(?:Premier)? (\d+(?:\.\d+){1,3})$">
+		<description>Nominum Authoritative Name Server (ANS)</description>
+		<example>Nominum ANS 3.0.1.0</example>
+		<example>Nominum ANS 3.0.2.0</example>
+		<example>Nominum ANS 5.0.0.0</example>
+		<example>Nominum ANS 5.0.0.1</example>
+		<example>Nominum ANS 5.1.0.0</example>
+		<example>Nominum ANS 5.1.0.1</example>
+		<example>Nominum ANS 5.1.1.0</example>
+		<example>Nominum ANS 5.2.0.0</example>
+		<example>Nominum ANSPremier 5.0.0.0</example>
+		<example>Nominum ANSPremier 5.1.1.6</example>
+		<example>Nominum ANSPremier 5.3.0.0</example>
+		<example>Nominum ANSPremier 5.3.0.1</example>
+		<example>Nominum ANSPremier 5.3.1.0</example>
+		<param name="service.vendor" pos="0" value="Nominum"/>
+		<param name="service.product" pos="0" value="ANS"/>
+		<param name="service.family" pos="0" value="ANS"/>
+		<param name="service.version" pos="1"/>
+	</fingerprint>
+	<fingerprint pattern="^Nominum Vantio (\d+(?:\.\d+){1,3})$">
+		<description>Nominum Vantio</description>
+		<example>Nominum Vantio 4.1.0.0</example>
+		<example>Nominum Vantio 4.2.0.0</example>
+		<example>Nominum Vantio 4.2.1.0</example>
+		<example>Nominum Vantio 5.1.1.1</example>
+		<example>Nominum Vantio 5.2.0.0</example>
+		<example>Nominum Vantio 5.2.0.1</example>
+		<example>Nominum Vantio 5.3</example>
+		<example>Nominum Vantio 5.3.1.2</example>
+		<example>Nominum Vantio 5.3.1.3</example>
+		<param name="service.vendor" pos="0" value="Nominum"/>
+		<param name="service.product" pos="0" value="Vantio"/>
+		<param name="service.family" pos="0" value="Vantio"/>
+		<param name="service.version" pos="1"/>
+	</fingerprint>
+	<fingerprint flags="REG_ICASE" pattern="^[Ss]imple\s?DNS (?:Plus |server )?(\d+(?:\.\d+){1,})$">
+		<description>Simple DNS Plus</description>
+		<example>Simple DNS Plus 3.50.01</example>
+		<example>Simple DNS Plus 3.60.01</example>
+		<example>Simple DNS Plus 5.2.116</example>
+		<example>Simple DNS Plus 5.2.121</example>
+		<example>Simple DNS server 1.0</example>
+		<example>SimpleDNS 1.0</example>
+		<example>SimpleDNS 5.2.120</example>
+		<param name="service.vendor" pos="0" value="JH Software"/>
+		<param name="service.product" pos="0" value="Simple DNS Plus"/>
+		<param name="service.family" pos="0" value="Simple DNS"/>
+		<param name="service.version" pos="1"/>
+		<param name="os.vendor" pos="0" value="Microsoft"/>
+		<param name="os.family" pos="0" value="Windows"/>
+		<param name="os.product" pos="0" value="Windows"/>
+	</fingerprint>
+	<fingerprint flags="REG_ICASE" pattern="^NSD (\d+(?:\.\d+){1,2}(?:\w+)?)$">
+		<description>Name Server Daemon (NSD)</description>
+		<example>NSD 3.2.14</example>
+		<example>NSD 3.2.15</example>
+		<example>NSD 3.2.2</example>
+		<example>NSD 3.2.3</example>
+		<example>NSD 3.2.4</example>
+		<example>NSD 3.2.5</example>
+		<example>NSD 3.2.6</example>
+		<example>NSD 3.2.7</example>
+		<example>NSD 3.2.8</example>
+		<example>NSD 3.2.9</example>
+		<example>NSD 4.0.0_imp_5</example>
+		<example>NSD 4.0.0_imp_6</example>
+		<example>NSD 4.0.0b1</example>
+		<example>NSD 4.0.0b2</example>
+		<example>NSD 4.0.0b3</example>
+		<param name="service.vendor" pos="0" value="NLnet Labs"/>
+		<param name="service.product" pos="0" value="NSD"/>
+		<param name="service.family" pos="0" value="NSD"/>
+		<param name="service.version" pos="1"/>
+	</fingerprint>
+</fingerprints>
